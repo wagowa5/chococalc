@@ -1,2 +1,4 @@
 # chococalc
 chococalcServer
+
+spring-initializerにChocoCalcOASをサブモジュール取り込みしてgradleとかsettingとかいろいろ弄りまわしてもまったくopenapi-generatorで生成したControllerを参照できなくて断念中…
