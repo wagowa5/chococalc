@@ -1,4 +1,4 @@
-[これ](https://github.com/wagowa5/chocoCalculator)をWebアプリ化したかったもの
+[これ](https://github.com/wagowa5/chocoCalculator)をWebアプリ化したかったが、spring-initializrから先に進めずリポジトリだけで存在してしまっている
 
 # chococalc
 chococalcServer
