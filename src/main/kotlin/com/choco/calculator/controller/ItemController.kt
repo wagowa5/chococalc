@@ -1,6 +1,6 @@
 package com.choco.calculator.controller
 
-import com.choco.calculator.`interface`.model.DisplayStatus
+import com.choco.calculator.apiInterface.model.DisplayStatus
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
