@@ -1,6 +1,7 @@
 package com.choco.calculator.apiInterface.model
 
 import com.fasterxml.jackson.annotation.JsonProperty
+import org.springframework.boot.jackson.JsonComponent
 
 /**
  * ステータス計算リクエスト用のJSONクラス

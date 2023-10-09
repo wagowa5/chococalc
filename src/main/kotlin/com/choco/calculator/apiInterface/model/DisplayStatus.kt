@@ -40,21 +40,70 @@ data class DisplayStatus(
     @JsonProperty("totalLuk")
     val totalLuk: Int,
 
-    @JsonProperty("upHp")
-    val upHp: Int,
+    @JsonProperty("eruHp")
+    val eruHp: Int,
 
-    @JsonProperty("upSp")
-    val upSp: Int,
+    @JsonProperty("eruSp")
+    val eruSp: Int,
 
-    @JsonProperty("upAtk")
-    val upAtk: Int,
+    @JsonProperty("eruAtk")
+    val eruAtk: Int,
 
-    @JsonProperty("upDef")
-    val upDef: Int,
+    @JsonProperty("eruDef")
+    val eruDef: Int,
 
-    @JsonProperty("upMat")
-    val upMat: Int,
+    @JsonProperty("eruMat")
+    val eruMat: Int,
 
-    @JsonProperty("upMdf")
-    val upMdf: Int,
+    @JsonProperty("eruMdf")
+    val eruMdf: Int,
+
+    @JsonProperty("eruPow")
+    val eruPow: Int,
+
+    @JsonProperty("eruInt")
+    val eruInt: Int,
+
+    @JsonProperty("eruSpd")
+    val eruSpd: Int,
+
+    @JsonProperty("eruVit")
+    val eruVit: Int,
+
+    @JsonProperty("eruLuk")
+    val eruLuk: Int,
+
+    @JsonProperty("fairyPow")
+    val fairyPow: Int,
+
+    @JsonProperty("fairyAtk")
+    val fairyAtk: Int,
+
+    @JsonProperty("fairyInt")
+    val fairyInt: Int,
+
+    @JsonProperty("fairyMat")
+    val fairyMat: Int,
+
+    @JsonProperty("beneVit")
+    val beneVit: Int,
+
+    @JsonProperty("fisLuk")
+    val fisLuk: Int,
+
+    @JsonProperty("siraMov")
+    val siraMov: Int,
+
+    @JsonProperty("liquidAtk")
+    val liquidAtk: Int,
+
+    @JsonProperty("liquidDef")
+    val liquidDef: Int,
+
+    @JsonProperty("liquidMat")
+    val liquidMat: Int,
+
+    @JsonProperty("liquidMdf")
+    val liquidMdf: Int,
+
 )
