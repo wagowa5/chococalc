@@ -1,10 +1,51 @@
 spring:
+  main:
+    allow-bean-definition-overriding: true
+
   datasource:
-    url: jdbc:mysql://localhost:3306/mydb?useSSL=false&allowPublicKeyRetrieval=true
-    username: root
-    password: my-secret-password
+    primary:
+      # ${datasource.primary.url:jdbc:mysql://localhost:3306}/choco_calculator?useSSL=false&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=utf8
+      url: jdbc:mysql://localhost:3306/choco_calculator?useSSL=false&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=utf8
+      #${datasource.username:root}
+      username: root
+      #${datasource.password:password}
+      password: my-secret-password
+      pool-name: PrimaryHikariPool
+      # http://time-complexity.blogspot.com/2015/03/db-connection-pool-hikaricp.html
+      #maximum-pool-size: ${datasource.primary.maximum-pool-size: }
+      #minimum-idle: ${datasource.primary.minimum-idle: }
+      #connection-test-query:
+      #max-lifetime:
+      #idle-timeout:
+      #connection-timeout: ${datasource.connection-timeout: }
+    #read:
+      #url: ${datasource.primary.url:jdbc:mysql://localhost:3306}/choco_calculator?useSSL=false&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=utf8
+      #pool-name: ReadHikariPool
+      #maximum-pool-size: ${datasource.read.maximum-pool-size:}
+      #minimum-idle: ${datasource.read.minimum-idle:}
   flyway:
+    enabled: true
     baseline-on-migrate: true
+    locations: ${flyway.locations:classpath:/db/migration}
   jpa:
     hibernate:
       ddl-auto: update
+
+server:
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  tomcat:
+    threads:
+      max: ${tomcat.threads.max:40}
+  port: ${port:8080}
+  #error:
+
+doma:
+  dialect: mysql
+  batch-size: 100
+  query-timeout: 50
+  exception-sql-log-type: formatted
+  sql-file-repository: no_cache

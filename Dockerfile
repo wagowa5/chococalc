@@ -1,5 +1,5 @@
 FROM openjdk:17
 WORKDIR /app
-COPY ./build/libs/client-sample-0.0.1-SNAPSHOT.jar /app/myapp.jar
-CMD ["java", "-jar", "/app/myapp.jar"]
+COPY ./build/libs/calculator-0.0.1-SNAPSHOT.jar /app/choco-calculator.jar
+CMD ["java", "-jar", "/app/choco-calculator.jar"]
 
